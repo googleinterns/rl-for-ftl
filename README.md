@@ -1,19 +1,14 @@
-# rl-for-ftl
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Project Name</title><link rel="stylesheet" type="text/css" href="/+static/base.FgwOs7Bvh5E6-lzR-xJuUQ.cache.css"/><link rel="stylesheet" type="text/css" href="/+static/doc.aizEIcp0qpW8JIXIrCB9UQ.cache.css"/><link rel="stylesheet" type="text/css" href="/+static/prettify/prettify.AOMOBqJIPcDq491E2ExAAw.cache.css"/><!-- default customHeadTagPart --></head><body class="Site"><header class="Site-header "><div class="Header"><div class="Header-title"></div></div></header><div class="Site-content Site-Content--markdown"><div class="Container"><div class="doc"><p>narges-intern-2020 code repo</p><p>This git repository is mainly used for code for narges&#39;s summer intern 2020.</p><h1><a class="h" name="Project-Name" href="#Project-Name"><span></span></a><a class="h" name="project-name" href="#project-name"><span></span></a>Project Name</h1><h2><a class="h" name="How-to-run-the-Simulator" href="#How-to-run-the-Simulator"><span></span></a><a class="h" name="how-to-run-the-simulator" href="#how-to-run-the-simulator"><span></span></a>How to run the Simulator</h2><h2><a class="h" name="Source-Code-Header" href="#Source-Code-Header"><span></span></a><a class="h" name="source-code-header" href="#source-code-header"><span></span></a>Source Code Header</h2><p>Every file containing source code must include copyright and license information. This includes any JS/CSS files that you might be serving out to browsers. (This is to help well-intentioned people avoid accidental copying that doesn&#39;t comply with the license.)</p><p>Apache header:</p><pre class="code">Copyright 2020 Google LLC
 
-The environment defines a simple probabilistic environment which is meant to simulate an SSD with multiple write points and garbage collection.
-The SSD is represented by an array in which each entry represents a write point and is capped by the amount of "space" available at that write point. 
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-User requests data to be written into SSD.
+    https://www.apache.org/licenses/LICENSE-2.0
 
-When writing data, an action corresponds to choosing a write-point to write the request. 
-
-Each action is rewarded based on the instantaneous write-amplification obsereved. For example, if two blocks are written into a write point which 
-is full, then the reward will be at most 1/2, since GC will need to remove two blocks in order to accomodate. Based on a probability "gc_probability"
-the GC algorithm may actually clear up more space than just what is required, further lowering the instantaneous reward. 
-
-Instantaneous write amplification is discounted if the user action corresponds to using the best write point (write point with most efficient GC),
-or clustering data by putting it in the same write point as it was before. 
-
-Tabular q-learning is applied to the system in order to learn how to optimally utilize both th GC discount and the clustering discount. 
-
-
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</pre></div></div></div><!-- default customFooter --><footer class="Site-footer"><div class="Footer"><span class="Footer-poweredBy">Powered by <a href="https://gerrit.googlesource.com/gitiles/">Gitiles</a>| <a href="https://policies.google.com/privacy">Privacy</a></span><div class="Footer-links"></div></div></footer></body></html>
