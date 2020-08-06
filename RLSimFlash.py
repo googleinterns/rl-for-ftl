@@ -51,7 +51,6 @@ class SimpleFlash(gym.Env):
         self.done = False
         self.write_amplification = 0
         self.action_space = spaces.Discrete(write_points)
-        self.secret = []
         self.total_discounts = 0 #diagnostic tool
 
     
